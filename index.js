@@ -1,7 +1,7 @@
-let newYear = '20 Mar 2022';
+let newYear = '2022-03-20T10:33:26';
 
 function countdown(){
-    let newYearDate = new Date(newYear);
+    let newYearDate = new Date(newYear.replace(/\s/, 'T'));
     let currentTime = new Date();
     
     let totalSeconds = (newYearDate - currentTime) / 1000;
