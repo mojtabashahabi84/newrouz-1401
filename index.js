@@ -12,10 +12,12 @@ function countdown(){
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("mins").innerHTML = mins;
-    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("days").innerHTML = '<p class="big-text" id="days">' + days + '</p><span>days</span>';
+    document.getElementById("hours").innerHTML = '<p class="big-text" id="hours">' + hours + '</p><span>hours</span>';
+    document.getElementById("mins").innerHTML = '<p class="big-text" id="mins">' + mins + '</p><span>mins</span>';
+    document.getElementById("seconds").innerHTML = '<p class="big-text" id="seconds">' + seconds + '</p><span>seconds</span>';
+
+    console.log(document.getElementById("seconds").innerHTML)
     
 }
 
