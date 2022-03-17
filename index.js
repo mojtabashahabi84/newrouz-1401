@@ -1,4 +1,3 @@
-
 const newYear = '20 Mar 2022 10:33:00 GMT -0500';
 
 function countdown(){
@@ -12,14 +11,12 @@ function countdown(){
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    document.getElementById("days").innerHTML = '<p class="big-text" id="days">' + days + '</p><span>days</span>';
-    document.getElementById("hours").innerHTML = '<p class="big-text" id="hours">' + hours + '</p><span>hours</span>';
-    document.getElementById("mins").innerHTML = '<p class="big-text" id="mins">' + mins + '</p><span>mins</span>';
-    document.getElementById("seconds").innerHTML = '<p class="big-text" id="seconds">' + seconds + '</p><span>seconds</span>';
+    document.getElementById("days").textContent += days;
+    document.getElementById("hours").innerText += hours;
+    document.getElementById("mins").innerText += mins;
+    document.getElementById("seconds").innerText += seconds;
 
-    console.log(document.getElementById("seconds").innerHTML)
     
 }
 
-countdown();
 setInterval(countdown, 1000);
