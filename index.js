@@ -11,10 +11,10 @@ function countdown(){
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    document.getElementById("days").textContent += days;
-    document.getElementById("hours").innerText += hours;
-    document.getElementById("mins").innerText += mins;
-    document.getElementById("seconds").innerText += seconds;
+    document.getElementById("days").textContent = parseInt(days);
+    document.getElementById("hours").innerText = parseInt(hours);
+    document.getElementById("mins").innerText = parseInt(mins);
+    document.getElementById("seconds").innerText = parseInt(seconds);
 
     
 }
