@@ -1,20 +1,20 @@
-const newYear = '20 Mar 2022 10:33:00 GMT -0500';
+let newYear = '20 Mar 2022';
 
 function countdown(){
-    const newYearDate = new Date(newYear);
-    const currentTime = new Date();
+    let newYearDate = new Date(newYear);
+    let currentTime = new Date();
     
-    const totalSeconds = (newYearDate - currentTime) / 1000;
+    let totalSeconds = (newYearDate - currentTime) / 1000;
 
-    const days = Math.floor(totalSeconds / 3600 / 24);
-    const hours = Math.floor(totalSeconds / 3600) % 24;
-    const mins = Math.floor(totalSeconds / 60) % 60;
-    const seconds = Math.floor(totalSeconds) % 60;
+    let days = Math.floor(totalSeconds / 3600 / 24);
+    let hours = Math.floor(totalSeconds / 3600) % 24;
+    let mins = Math.floor(totalSeconds / 60) % 60;
+    let seconds = Math.floor(totalSeconds) % 60;
 
-    document.getElementById("days").textContent = typeof(days);
-    document.getElementById("hours").innerText = parseInt(hours);
-    document.getElementById("mins").innerText = parseInt(mins);
-    document.getElementById("seconds").innerText = parseInt(seconds);
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("mins").innerText = mins;
+    document.getElementById("seconds").innerText = seconds;
 
     
 }
