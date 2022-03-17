@@ -11,7 +11,7 @@ function countdown(){
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    document.getElementById("days").textContent = parseInt(days);
+    document.getElementById("days").textContent = typeof(days);
     document.getElementById("hours").innerText = parseInt(hours);
     document.getElementById("mins").innerText = parseInt(mins);
     document.getElementById("seconds").innerText = parseInt(seconds);
