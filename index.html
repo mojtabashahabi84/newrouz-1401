@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نوروز مبارک</title>
+    <title>Happy Newrouz</title>
     <link/>
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
 
 </head>
     <body>
@@ -29,34 +30,6 @@
                 <span>seconds</span>
             </div>
         </div>
-
-        <script>
-        
-            const newYear = '20 Mar 2022 10:33:00 GMT -0500'
-            let nIntervId
-            
-            function countdown(){
-                const newYearDate = new Date(newYear)
-                const currentTime = new Date()
-                
-                const totalSeconds = (newYearDate - currentTime) / 1000
-    
-                const days = Math.floor(totalSeconds / 3600 / 24)
-                const hours = Math.floor(totalSeconds / 3600) % 24
-                const mins = Math.floor(totalSeconds / 60) % 60
-                const seconds = Math.floor(totalSeconds) % 60
-    
-                document.getElementById("days").textContent = days
-                document.getElementById("hours").textContent = hours
-                document.getElementById("mins").textContent = mins
-                document.getElementById("seconds").textContent = seconds
-                
-            }
-    
-            nIntervId = setInterval(countdown, 1000)
-    
-    
-        </script>
     </body>
 
 </html>
