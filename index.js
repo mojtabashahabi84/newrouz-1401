@@ -1,4 +1,12 @@
-let newYear = '2022-03-20T10:33:26';
+let newYear = '2023-03-20T14:22:12';
+
+function zeroOrPos(number){
+    if (number < 0) {
+        return 0;
+    } else {
+        return number;
+    }
+}
 
 function countdown(){
     let newYearDate = new Date(newYear.replace(/\s/, 'T'));
@@ -11,10 +19,10 @@ function countdown(){
     let mins = Math.floor(totalSeconds / 60) % 60;
     let seconds = Math.floor(totalSeconds) % 60;
 
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("mins").innerText = mins;
-    document.getElementById("seconds").innerText = seconds;
+    document.getElementById("days").textContent = zeroOrPos(days);
+    document.getElementById("hours").innerText = zeroOrPos(hours);
+    document.getElementById("mins").innerText = zeroOrPos(mins);
+    document.getElementById("seconds").innerText = zeroOrPos(seconds);
 
     
 }
